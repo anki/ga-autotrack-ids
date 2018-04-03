@@ -70,7 +70,9 @@ Of course, you'll have to make the following modifications to the above code to 
 If you use npm and a module loader that understands [ES2015 imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) (e.g. [Webpack](https://webpack.js.org/), [Rollup](http://rollupjs.org/), or [SystemJS](https://github.com/systemjs/systemjs)), you can include ga-autotrack-ids in your build by importing it as you would any other npm module:
 
 ```sh
-npm install autotrack
+git clone git@github.com:anki/ga-autotrack-ids.git
+cd ga-autotrack-ids
+npm install -g
 ```
 
 ```js
@@ -83,18 +85,18 @@ The above `import` statement will include all autotrack plugins in your generate
 
 ```js
 // In your JavaScript code
-import 'autotrack/lib/plugins/client-id-tracker';
-import 'autotrack/lib/plugins/hit-id-tracker';
-import 'autotrack/lib/plugins/session-id-tracker';
+import 'ga-autotrack-ids/lib/plugins/client-id-tracker';
+import 'ga-autotrack-ids/lib/plugins/hit-id-tracker';
+import 'ga-autotrack-ids/lib/plugins/session-id-tracker';
 ```
 
 The above examples show how to include the autotrack plugin source in your site's main JavaScript bundle, which accomplishes the first step of the [two-step installation process](#installation-and-usage). However, you still have to update your tracking snippet and require the plugins you want to use on the tracker.
 
 ```js
 // Import just the plugins you want to use.
-import 'autotrack/lib/plugins/client-id-tracker';
-import 'autotrack/lib/plugins/hit-id-tracker';
-import 'autotrack/lib/plugins/session-id-tracker';
+import 'ga-autotrack-ids/lib/plugins/client-id-tracker';
+import 'ga-autotrack-ids/lib/plugins/hit-id-tracker';
+import 'ga-autotrack-ids/lib/plugins/session-id-tracker';
 
 ga('create', 'UA-XXXXX-Y', 'auto');
 
@@ -146,7 +148,7 @@ See the individual plugin documentation to reference what options each plugin ac
 
 ### Custom builds
 
-Autotrack comes with its own build system, so you can create autotrack bundles containing just the plugins you need. Once you've [installed autotrack via npm](#loading-autotrack-via-npm), you can create custom builds by running the `ga-autotrack-ids` command.
+GA Autotrack IDs comes with its own build system, so you can create bundles containing just the plugins you need. Once you've [installed autotrack via npm](#loading-ga-autotrack-id-via-npm), you can create custom builds by running the `ga-autotrack-ids` command.
 
 For example, the following command generates an `ga-autotrack-ids.js` bundle and source map for just the `hitIdTracker`, and `hitTimestampTracker` plugins:
 
@@ -161,7 +163,7 @@ Once this file is generated, you can include it in your HTML templates where you
 <script async src="path/to/ga-autotrack-ids.custom.js"></script>
 ```
 
-### Using autotrack with multiple trackers
+### Using Ga Autotrack IDs with multiple trackers
 
 All autotrack plugins support [multiple trackers](https://developers.google.com/analytics/devguides/collection/analyticsjs/creating-trackers#working_with_multiple_trackers) and work by specifying the tracker name in the `require` command. The following example creates two trackers and requires various autotrack plugins on each.
 
