@@ -1,0 +1,19 @@
+
+Usage: autotrack-id [options]
+
+  Generates a minified, ga-autotrack-ids file and source map with only the specified
+  ga-autotrack-ids plugins.
+
+Example:
+
+  ga-autotrack-ids -p hitIdTracker,sessionIdTracker
+
+Options:
+
+  -o, --output       The output path for the generated file and source map.
+                     Defaults to "ga-autotrack-ids.js" and "ga-autotrack-ids.js.map"
+                     (Note: the source map filename will append ".map").
+
+  -p, --plugins      A comma-separated list of plugin names.
+
+  -h, --help         Displays this help message.
