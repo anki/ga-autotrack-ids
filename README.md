@@ -3,11 +3,11 @@
 - [Overview](#overview)
 - [Plugins](#plugins)
 - [Installation and usage](#installation-and-usage)
-  - [Loading autotrack via npm](#loading-autotrack-via-npm)
+  - [Loading GA Autotrack IDs via npm](#loading-ga-autotrack-ids-via-npm)
   - [Passing configuration options](#passing-configuration-options)
 - [Advanced configuration](#advanced-configuration)
   - [Custom builds](#custom-builds)
-  - [Using autotrack with multiple trackers](#using-autotrack-with-multiple-trackers)
+  - [Using GA Autotrack IDs with multiple trackers](#using-ga-autotrack-ids-with-multiple-trackers)
 - [Browser Support](#browser-support)
 - [Translations](#translations)
 
@@ -65,7 +65,7 @@ Of course, you'll have to make the following modifications to the above code to 
 
 **Note:** the [analytics.js plugin system](https://developers.google.com/analytics/devguides/collection/analyticsjs/using-plugins) is designed to support asynchronously loaded scripts, so it doesn't matter if `ga-autotrack-ids.js` is loaded before or after `analytics.js`. It also doesn't matter if the `ga-autotrack-ids.js` library is loaded individually or bundled with the rest of your JavaScript code.
 
-### Loading autotrack via npm
+### Loading GA Autotrack IDs via npm
 
 If you use npm and a module loader that understands [ES2015 imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) (e.g. [Webpack](https://webpack.js.org/), [Rollup](http://rollupjs.org/), or [SystemJS](https://github.com/systemjs/systemjs)), you can include ga-autotrack-ids in your build by importing it as you would any other npm module:
 
@@ -163,7 +163,7 @@ Once this file is generated, you can include it in your HTML templates where you
 <script async src="path/to/ga-autotrack-ids.custom.js"></script>
 ```
 
-### Using Ga Autotrack IDs with multiple trackers
+### Using GA Autotrack IDs with multiple trackers
 
 All autotrack plugins support [multiple trackers](https://developers.google.com/analytics/devguides/collection/analyticsjs/creating-trackers#working_with_multiple_trackers) and work by specifying the tracker name in the `require` command. The following example creates two trackers and requires various autotrack plugins on each.
 
