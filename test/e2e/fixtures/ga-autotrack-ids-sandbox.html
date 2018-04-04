@@ -13,7 +13,7 @@
     ga('create', 'UA-40941061-3', 'auto');
 
     // Require the plugin
-    ga('require', 'GaTaskManager');
+    ga('require', 'gaTaskManager');
 
     // Add a function to customTask
     ga('GaTaskManager:addFunctionToTask', 'customTask', 'logShinyString', function(model){
@@ -44,7 +44,7 @@
       ga('send', 'pageview');
     }, 5000);
   </script>
-  <script async src="https://cdn.jsdelivr.net/gh/anki/ga-task-manager@v0.7.0/ga-task-manager.js"></script>
+  <script async src="https://cdn.jsdelivr.net/gh/anki/ga-task-manager@v0.8.1/ga-task-manager.js"></script>
   <script async src="/ga-autotrack-ids.js"></script>
 </head>
 <body>
