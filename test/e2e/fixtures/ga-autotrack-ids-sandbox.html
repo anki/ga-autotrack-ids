@@ -16,24 +16,24 @@
     ga('require', 'gaTaskManager');
 
     // Add a function to customTask
-    ga('GaTaskManager:addFunctionToTask', 'customTask', 'logShinyString', function(model){
+    ga('gaTaskManager:addFunctionToTask', 'customTask', 'logShinyString', function(model){
       console.log("Look at my shiny new random customTask");
     });
 
-    ga('require', 'ClientIdTracker', {
+    ga('require', 'clientIdTracker', {
       customDimensionIndex: 1
     });
-    ga('require', 'SessionIdTracker', {
+    ga('require', 'sessionIdTracker', {
       customDimensionIndex: 2,
       customSession: {
         customDimensionIndex: 5,
-        uuid: 'MY-UUID'
+        id: 'MY-UUID'
       }
     });
-    ga('require', 'HitIdTracker', {
+    ga('require', 'hitIdTracker', {
       customDimensionIndex: 3
     });
-    ga('require', 'HitTimestampTracker', {
+    ga('require', 'hitTimestampTracker', {
       customDimensionIndex: 4
     });
 
