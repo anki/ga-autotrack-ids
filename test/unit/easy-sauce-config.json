@@ -1,0 +1,15 @@
+{
+  "testPath": "/test/unit",
+  "service": "sauce-connect",
+  "serviceOptions": {
+    "verbose": true,
+    "verboseDebugging": true
+  },
+  "platforms": [
+    [
+      "Windows 10",
+      "chrome",
+      "latest"
+    ]
+  ]
+}
